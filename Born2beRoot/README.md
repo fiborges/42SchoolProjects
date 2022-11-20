@@ -13,19 +13,12 @@ This guide has 8 Parts:
 
 1. Click on this link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
 
-2. Scroll to the bottom of the website and click `debian-11.3.0-amd64-netinst.iso` (3rd from the bottom), if that doesn't work, then you can try either `debian-edu-11.3.0-amd64-netinst.iso` or `debian-mac-11.3.0-amd64-netinst.iso`
-
 ### Part 1.1 - Sgoingfre (Only 42 Adelaide Students)
 
-1. Head over to iTerm2
+Head over to iTerm2
 <img width="622" alt="Screen Shot 2022-07-26 at 4 26 06 PM" src="https://user-images.githubusercontent.com/58959408/180943494-9c25b321-4cae-4c39-89bb-92271a245489.png">
 
  Downloading Your Virtual Machine and put that download in this sgoinfre folder with your username.
-
-### Part 1.2 - Virtual Box
-
-#### Now head over to Virtual Box to continue on.
-<img width="264" alt="Screen Shot 2022-06-24 at 12 18 12 PM" src="https://user-images.githubusercontent.com/58959408/175452234-79c7f008-10b2-4e4b-a602-95886d9e2508.png">
 
 ## Part 2 - Installing Your Virtual Machine
 
