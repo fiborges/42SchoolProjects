@@ -26,7 +26,7 @@
 I have just put them in folders and modified the Makefile to have a better organized repository.
 
 #### My grade
-<img src="https://github.com/fiborges/42SchoolProjects/blob/main/Ft_libft/Screenshot%202022-11-20%20at%2014.55.31.png"/>
+<img src="https://github.com/fiborges/42SchoolProjects/blob/main/Ft_libft/Screenshot%202022-11-20%20at%2014.55.31.png" width="200" height="120"/>
 
 ## List of functions:
 
