@@ -6,13 +6,6 @@
 	<b><i>Reading a line on a fd is way too tedious</i></b><br>
 </p>
 
-<p align="center">
-	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/fiborges/GetNextLine?color=lightblue" />
-	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/fiborges/GetNextLine?color=critical" />
-	<img alt="Code language count" src="https://img.shields.io/github/languages/count/fiborges/GetNextLine?color=yellow" />
-	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/fiborges/GetNextLine?color=blue" />
-	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/fiborges/GetNextLine?color=green" />
-</p>
 
 <h3 align="center">
 	<a href="#%EF%B8%8F-about">About</a>
