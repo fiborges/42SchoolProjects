@@ -30,7 +30,7 @@ Projects developed or under development of the course. Each project has a brief 
 
 <br>
 
- :white_check_mark: **Get_Next_Line (C)** - https://
+ :white_check_mark: **Get_Next_Line (C)** - https://github.com/fiborges/42SchoolProjects/tree/main/GetNextLine
  
  
  
