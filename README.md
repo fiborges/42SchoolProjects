@@ -29,7 +29,7 @@ Projects developed or under development of the course. Each project has a brief 
     
  ## LEVEL  <img src="https://media.giphy.com/media/Bdk2YzFKNYLwplLVNw/giphy.gif" width="30"> 
 
-:white_check_mark: **Born2BeRoot (Shell & Virtual Machine)** - https://
+:white_check_mark: **Born2BeRoot (Shell & Virtual Machine)** - https://github.com/fiborges/42SchoolProjects/tree/main/Born2beRoot
 
 <br>
 
