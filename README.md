@@ -25,7 +25,7 @@ Projects developed or under development of the course. Each project has a brief 
  
 ## LEVEL  <img src="https://media.giphy.com/media/m8YFup5AVSW4/giphy.gif" width="30">
 
- :white_check_mark: **Libft (C)** - https:
+ :white_check_mark: **Libft (C)** - https://github.com/fiborges/42SchoolProjects/tree/main/Ft_libft
     
  ## LEVEL  <img src="https://media.giphy.com/media/Bdk2YzFKNYLwplLVNw/giphy.gif" width="30"> 
 
