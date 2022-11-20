@@ -14,8 +14,6 @@ This guide has 8 Parts:
 1. Click on this link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
 
 ### Part 1.1 - Sgoingfre (Only 42 Adelaide Students)
-
-Head over to iTerm2
 <img width="622" alt="Screen Shot 2022-07-26 at 4 26 06 PM" src="https://user-images.githubusercontent.com/58959408/180943494-9c25b321-4cae-4c39-89bb-92271a245489.png">
 
  Downloading Your Virtual Machine and put that download in this sgoinfre folder with your username.
