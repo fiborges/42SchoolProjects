@@ -4,6 +4,13 @@
 
 # 42 School Projects
 
+<p align="center">
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/fiborges/42SchoolProjects?color=lightblue" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/fiborges/42SchoolProjects?color=yellow" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/fiborges/42SchoolProjects?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/fiborges/42SchoolProjects?color=green" />
+</p>
+
 Projects developed or under development of the course. Each project has a brief explanation of what it consists of and they all have the tools I used to test.
 
 </div>
