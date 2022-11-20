@@ -1,4 +1,4 @@
-## Born2BeRoot Guide 
+## Born2BeRoot Guide MANDATORY 
 This guide has 8 Parts: 
 - Part 1 - Downloading Your Virtual Machine
 - Part 2 - Installing Your Virtual Machine
