@@ -33,7 +33,7 @@ Projects developed or under development of the course. Each project has a brief 
 
 <br>
 
-:white_check_mark: **Ft_Printf (C)** - https://
+:white_check_mark: **Ft_Printf (C)** - https://github.com/fiborges/42SchoolProjects/tree/main/Ft_printf
 
 <br>
 
