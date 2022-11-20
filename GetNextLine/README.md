@@ -14,6 +14,8 @@
 </h3>
 
 ---
+#### My grade
+<img src=""/>
 
 ## 💡 About the project
 
