@@ -18,6 +18,7 @@
 <img src="https://github.com/fiborges/42SchoolProjects/blob/main/GetNextLine/Screenshot%202022-11-20%20at%2014.57.04.png" width="200" height="80"/>
 
 ## 💡 About the project
+[![42](https://img.shields.io/badge/BornToCode-2_Circle-00babc?style=flat-square&logo=42)](https://42seoul.kr/)
 
 > _The aim of this project is to make you code a function that returns a line, read from a file descriptor._
 
