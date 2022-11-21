@@ -15,6 +15,7 @@
 ---
 
 ## 💡 About the project
+[![42](https://img.shields.io/badge/BornToCode-1_Circle-00babc?style=flat-square&logo=42)](https://42seoul.kr/)
 
 > _The aim of this project is to code a C library regrouping usual functions that you'll be allowed to use in all your other projects._
 	Programming in C can be very tedious when you don't have access to the very useful standard functions.
