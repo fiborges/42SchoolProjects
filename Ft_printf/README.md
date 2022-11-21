@@ -1,5 +1,6 @@
 <h1 align="center">
 	🧰 ft_printf
+	[![42](https://img.shields.io/badge/BornToCode-2_Circle-00babc?style=flat-square&logo=42)](https://42seoul.kr/)
 </h1>
 
 <p align="center">
