@@ -22,9 +22,6 @@
 	The library will help you for your future projects in C. Through this project, you have the opportunity
 	to extend your list of functions in your own way!
 
-**NOTE:** To be successful with moulinette on this project I had to put all the files in the same directory.
-I have just put them in folders and modified the Makefile to have a better organized repository.
-
 #### My grade
 <img src="https://github.com/fiborges/42SchoolProjects/blob/main/Ft_libft/Screenshot%202022-11-20%20at%2014.55.31.png" width="200" height="120"/>
 
@@ -94,7 +91,7 @@ I have just put them in folders and modified the Makefile to have a better organ
 
 ## 📋 Testing
 
-You can use any of this third party testers to test the project
+You can use any of this testers to test the project. Be careful to do your tests, these programs are not 100% foolproof!
 
 
 * [Tripouille/libfTester](https://github.com/Tripouille/libftTester)
