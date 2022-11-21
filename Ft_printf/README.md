@@ -1,11 +1,11 @@
 <h1 align="center">
 	🧰 ft_printf
-	[![42](https://img.shields.io/badge/BornToCode-2_Circle-00babc?style=flat-square&logo=42)](https://42seoul.kr/)
 </h1>
 
 <p align="center">
 	<b><i>Because putnbr and putstr aren’t enough</i></b><br>
 </p>
+
 
 <h3 align="center">
 	<a href="#%EF%B8%8F-about">About</a>
@@ -16,6 +16,7 @@
 ---
 
 ## 💡 About the project
+[![42](https://img.shields.io/badge/BornToCode-2_Circle-00babc?style=flat-square&logo=42)](https://42seoul.kr/)
 
 > _This project is pretty straight forward. You will recode printf. Hopefully you will be able to reuse it in future project without the fear of being flagged as a cheater. You will mainly learn how to use variadic arguments._
 
