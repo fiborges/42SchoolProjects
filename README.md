@@ -39,7 +39,9 @@ Projects developed or under development of the course. Each project has a brief 
 
  :white_check_mark: **Get_Next_Line (C)** - https://github.com/fiborges/42SchoolProjects/tree/main/GetNextLine
  
- 
+  ## LEVEL  <img src="https://media.giphy.com/media/h5WehVcg3HN9U7yBSf/giphy.gif" width="30"> 
+  
+  :pencil: **MiniTalk (C/Signals)** - 
  
  
 
