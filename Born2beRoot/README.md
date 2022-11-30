@@ -1,6 +1,8 @@
 ## Born2BeRoot Guide MANDATORY
 [![42](https://img.shields.io/badge/BornToCode-2_Circle-00babc?style=flat-square&logo=42)](https://42seoul.kr/)
 
+#### My grade
+<img src="" width="200" height="80"/>
 
 This guide has 8 Parts: 
 - Part 1 - Downloading Your Virtual Machine
