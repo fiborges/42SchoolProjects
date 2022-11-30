@@ -1,4 +1,11 @@
-# minitalk
+<h1 align="center">
+	📖 MiniTalk
+</h1>
+
+<p align="center">
+	<b><i>You must create a communication program in the form of a client and a server</i></b><br>
+</p>
+
 
 # What is signal?
 
