@@ -144,23 +144,22 @@ client**._
 ℹ️  _Linux system does NOT queue signals when you already have pending
 signals of this type!_
 
-<details>
+How to handle signals quickly since they don't queue when they are pending, without losing sent signals?
 	
-### How to handle signals quickly since they don't queue when they are pending, without losing sent signals?
-	
->**The _sleep()_ function suspends execution of the calling process** for the number of seconds specified in the seconds argument or **until a signal is caught** (thus interrupting the call).
+The _sleep()_ function suspends execution of the calling process** for the number of seconds specified in the seconds argument or **until a signal is caught** (thus interrupting the call).
 
-My Process:
+### My Process:
 
 Server:
 
-	DECODE_BINARY
+DECODE_BINARY
 	
 	
-	With signals you cannot send any data, just communicate between processes
-	i.e. send notifications. The kill function sends the signal. Depending on
-	whether SIGUSR1 or SIGUSR2 is send, the signal gets translated into 0 or 1.
-	Alternatively the bit shifting part can be performed the other way round:
+With signals you cannot send any data, just communicate between processes i.e. send notifications. The kill function sends the signal. Depending on
+whether SIGUSR1 or SIGUSR2 is send, the signal gets translated into 0 or 1.
+
+Alternatively the bit shifting part can be performed the other way round:
+	
 	static int				bit = 7;
 	if (signal == SIGUSR1)
 		c += 1 << bit;
@@ -172,56 +171,48 @@ Server:
 		c = 0;
 	}
 	
-	SIGNAL_HANDLER
+SIGNAL_HANDLER
 	
-	The function is called by sigaction, whenever the server receives a signal
-	from the client.
-	Siginfo struct delivers the sender PID.
-	Signal handlers run asyncronously, which means they can interrupt the code
-	at any point. Therefore you can only use signal-save functions, i.e. write.
-	The manual lists save functions.
+The function is called by sigaction, whenever the server receives a signal from the client.
+Siginfo struct delivers the sender PID.
+Signal handlers run asyncronously, which means they can interrupt the code at any point. Therefore you can only use signal-save functions, i.e. write.
+
+The manual lists save functions.
 	
 	https://www.youtube.com/watch?v=PErrlOx3LYE
 	
 	
-	MAIN
+MAIN
 	
 	https://linuxhint.com/c-sigaction-function-usage/
 	
-	Sigaction is to be preferred over the signal function according to the
-	manual, because the behaviour of signal varies across UNIX versions and
-	has varied across Linux versions as well.
-	To use the sigaction function, you have to create a struct.
-	The sigaction function reacts, whenever a specific signal is sent and calls
-	the handler, to which the sigaction function is bound.
-	The signals SIGUSR1 and SIGUSR2 are not used by Linux for generic process
-	operations and can be used as needed by the user.
-	The signal() function does not block other signals when the current
-	handler’s execution is under process. At the same time, the sigaction
-	function can block other signals until the current handler has returned.
-	SA_SIGINFO — queue this signal. The default is not to queue a signal
-	delivered to a process. If a signal isn't queued, and the same signal is
-	set multiple times on a process or thread before it runs, only the last
-	signal is delivered. If you set the SA_SIGINFO flag, the signals are
-	queued, and they're all delivered.
+Sigaction is to be preferred over the signal function according to the manual, because the behaviour of signal varies across UNIX versions and
+has varied across Linux versions as well.
+To use the sigaction function, you have to create a struct.
+The sigaction function reacts, whenever a specific signal is sent and calls the handler, to which the sigaction function is bound.
+The signals SIGUSR1 and SIGUSR2 are not used by Linux for generic process operations and can be used as needed by the user.
+The signal() function does not block other signals when the current handler’s execution is under process. At the same time, the sigaction
+function can block other signals until the current handler has returned.
+SA_SIGINFO — queue this signal. The default is not to queue a signal delivered to a process. If a signal isn't queued, and the same signal is
+set multiple times on a process or thread before it runs, only the last signal is delivered. If you set the SA_SIGINFO flag, the signals are
+queued, and they're all delivered.
 
 Client:
 
-	CLIENT_HANDLER	
+CLIENT_HANDLER	
 
-	The handle is called by sigaction in the main function, when the main
-	receives a signal.
+The handle is called by sigaction in the main function, when the main receives a signal.
 	
-	MT_TRANSFER_SIGNAL
+MT_TRANSFER_SIGNAL
 		
-	The function mt_transfer_signal encodes the character string into binary
-	and sends the single bits to the server function, using the signals SIGUSR1
-	(equals 1) and SIGUSR2 (equals 0).
-	The outer while loop loops through each character of the string. The inner
-	while loop encodes the charcater into binary, containing of 8 bits (ASCII):
+The function mt_transfer_signal encodes the character string into binary and sends the single bits to the server function, using the signals SIGUSR1
+(equals 1) and SIGUSR2 (equals 0).
+The outer while loop loops through each character of the string. The inner while loop encodes the charcater into binary, containing of 8 bits (ASCII):
+
 	Example: the character 'a' equals the decimal 97, which is in binary
 	0	1	1	0	0	0	0	1
 	128	64	32	16	8	4	2	1
+	
 	The loop loops 8 times to look at each bit.
 	In the first loop, the function looks at the first bit (first position):
 	i equals 0 in this loop, so no bit shifting is done. Then the bitwise
@@ -230,6 +221,7 @@ Client:
 	1	0	0	0	0	0	0	0 (128)
 	---------------------------------- &
 	0	0	0	0	0	0	0	0
+	
 	The result of the & operation is 0, so the if statement is not true and the
 	else statement sends SIGUSR2;
 	In the second loop, i equals 1, so the character binary is shifted to the
@@ -238,22 +230,20 @@ Client:
 	1	0	0	0	0	0	0	0 (128)
 	----------------------------------	&
 	1	0	0	0	0	0	0	0
+	
 	The result of the & operation is 1, so the if statement is true and sends
 	SIGUSR1 to the server function.
-	The encoding could also be done the other way round: starting with a bit
-	shift by seven bits and comparing to to decimal one, which only holds a
-	1 in the leftmost position in binary (00000001);
-	Once, the string is sent, a terminating 0 (00000000 in binary) is sent to
-	the server, to let it know that the transfer is finished.
+	
+The encoding could also be done the other way round: starting with a bit shift by seven bits and comparing to to decimal one, which only holds a
+1 in the leftmost position in binary (00000001);
+Once, the string is sent, a terminating 0 (00000000 in binary) is sent to the server, to let it know that the transfer is finished.
 
-	Signals don't queue, therefore a microsecond break (usleep) is needed.
-	The kill() function sends a signal to a process or process group specified
-	by PID.
+Signals don't queue, therefore a microsecond break (usleep) is needed.
+The kill() function sends a signal to a process or process group specified by PID.
 	
 	
-	MAIN
+MAIN
 
-	The main function in this file takes two arguments, the server PID and a
-	user defined string.
+The main function in this file takes two arguments, the server PID and a user defined string.
 
 	
