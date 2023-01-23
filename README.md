@@ -43,7 +43,7 @@ Projects developed or under development of the course. Each project has a brief 
   
   :white_check_mark: **MiniTalk (C/Signals)** - https://github.com/fiborges/42SchoolProjects/tree/main/MiniTalk
   
-  :white_check_mark: **Push_Swap (Sorting Algorithm(C)) ** - https://github.com/fiborges/42SchoolProjects/tree/main/Push_Swap
+  :white_check_mark: **Push_Swap (Sorting Algorithm(C))** - https://github.com/fiborges/42SchoolProjects/tree/main/Push_Swap
  
  
 
