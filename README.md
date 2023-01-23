@@ -11,7 +11,7 @@
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/fiborges/42SchoolProjects?color=green" />
 </p>
 
-Projects developed or under development of the course. Each project has a brief explanation of what it consists of and they all have the tools I used to test.
+Projects developed or under development of the course. Each project has a brief explanation of what it consists of.
 
 </div>
 <div align="center">
