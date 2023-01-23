@@ -41,7 +41,9 @@ Projects developed or under development of the course. Each project has a brief 
  
   ## LEVEL  <img src="https://media.giphy.com/media/Iuee4dBGyRp9VatCZe/giphy.gif" width="30"> 
   
-  :pencil: **MiniTalk (C/Signals)** - https://github.com/fiborges/42SchoolProjects/tree/main/MiniTalk
+  :white_check_mark: **MiniTalk (C/Signals)** - https://github.com/fiborges/42SchoolProjects/tree/main/MiniTalk
+  
+  :white_check_mark: **Push_Swap (Sorting Algorithm(C)) ** - https://github.com/fiborges/42SchoolProjects/tree/main/Push_Swap
  
  
 
