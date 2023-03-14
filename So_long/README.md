@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://github.com/fiborges/42SchoolProjects/blob/main/So_Long/20230311_113312.jpg" width="600" height="300"/>>
+	<img src="https://github.com/fiborges/42SchoolProjects/blob/main/So_long/20230311_113312.jpg" width="600" height="300"/>>
 </p>
 
 <h1 align="center">
