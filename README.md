@@ -48,6 +48,12 @@ Projects developed or under development of the course. Each project has a brief 
   :white_check_mark: **So_Long (Computer graphics project)** - https://github.com/fiborges/42SchoolProjects/tree/main/So_long
   
   :white_check_mark: **Exam_Rank2 (100/100)**
+  
+  ## LEVEL  <img src="https://giphy.com/gifs/postcode-loterij-koffer-miljoenenjacht-koffertje-h5WehVcg3HN9U7yBSf" width="30"> 
+  
+  **Philosophers (Basics of threading a process)** - 
+  
+  
  
  
 
