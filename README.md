@@ -49,7 +49,7 @@ Projects developed or under development of the course. Each project has a brief 
   
   :white_check_mark: **Exam_Rank2 (100/100)**
   
-  ## LEVEL  <img src="https://giphy.com/gifs/postcode-loterij-koffer-miljoenenjacht-koffertje-h5WehVcg3HN9U7yBSf" width="30"> 
+  ## LEVEL  <img src="https://media.giphy.com/media/h5WehVcg3HN9U7yBSf/giphy.gif" width="30"> 
   
   **Philosophers (Basics of threading a process)** - 
   
