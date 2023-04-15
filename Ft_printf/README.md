@@ -14,8 +14,6 @@
 </h3>
 
 ---
-#### My grade
-<img src="https://github.com/fiborges/42SchoolProjects/blob/main/Ft_printf/printf.jpg" width="200" height="80"/>
 
 ## 💡 About the project
 [![42](https://img.shields.io/badge/BornToCode-2_Circle-00babc?style=flat-square&logo=42)](https://42seoul.kr/)
