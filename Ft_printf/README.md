@@ -15,7 +15,6 @@
 
 ---
 #### My grade
-<img src="" width="200" height="80"/>
 <img src="https://github.com/fiborges/42SchoolProjects/blob/main/Ft_printf/printf.jpg" width="200" height="80"/>
 
 ## 💡 About the project
