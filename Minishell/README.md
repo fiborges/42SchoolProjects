@@ -1,3 +1,22 @@
+<h1 align="center">
+	🧰 MINISHELL
+</h1>
+
+<p align="center">
+	<b><i>As beautiful as a shell</i></b><br>
+</p>
+
+<h3 align="center">
+	<a href="#%EF%B8%8F-about">About</a>
+	<span> · </span>
+	<a href="#-testing">Testing</a>
+</h3>
+
+---
+
+## 💡 About the project
+[![42](https://img.shields.io/badge/BornToCode-3_Circle-00babc?style=flat-square&logo=42)](https://42seoul.kr/)
+
 Minishell is a simple command-line shell program developed in C. It aims to provide a basic shell environment with support for executing commands, managing processes, and handling input/output redirection. The project is developed as part of a learning process to understand the inner workings of a shell and gain knowledge about various system calls and process management in Unix-like systems.
 
 The minishell program offers a prompt where users can enter commands and execute them. It supports various built-in commands such as cd, echo, pwd, export, and unset. Additionally, it allows the execution of external programs available in the system's $PATH environment variable.
@@ -15,16 +34,19 @@ Command history
 Signal handling (Ctrl+C, Ctrl+D, Ctrl+\)
 Pipes (|) for command chaining
 Error handling and edge cases
+
+
+
 Getting Started
+
 To run the minishell program on your local machine, follow these steps:
 
 
-Clone the repository
-make
-./minishell
+1 - Clone the repository then "make" and "./minishell".
 
 
-Usage
+Testing:
+
 After running the minishell program, you will see a prompt where you can enter commands. You can execute various commands, including built-in commands and external programs.
 
 
