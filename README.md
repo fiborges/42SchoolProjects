@@ -51,7 +51,13 @@ Projects developed or under development of the course. Each project has a brief 
   
   ## LEVEL  <img src="https://media.giphy.com/media/h5WehVcg3HN9U7yBSf/giphy.gif" width="30"> 
   
-  **Philosophers (Basics of threading a process)** - 
+  :white_check_mark: **Philosophers (Basics of threading a process)** - https://github.com/fiborges/42SchoolProjects/tree/main/Philosophers
+  
+  :white_check_mark: ** Minishell (As beautiful as a shell) ** - https://github.com/fiborges/42SchoolProjects/tree/main/Minishell
+
+  :white_check_mark: **Exam_Rank3 (100/100)**
+
+  
   
   
  
