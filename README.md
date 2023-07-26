@@ -57,6 +57,10 @@ Projects developed or under development of the course. Each project has a brief 
 
   :white_check_mark: **Exam_Rank3 (100/100)**
 
+   ## LEVEL  <img src="https://media.giphy.com/media/U7oYLyQqXM9sA/giphy.gif" width="30"> 
+
+   :white_check_mark: **Net_Practice (Practical exercise to let you discover networking)** - https://github.com/fiborges/42SchoolProjects/tree/main/NetPratice
+
   
   
   
