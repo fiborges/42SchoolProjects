@@ -1,3 +1,9 @@
+</br>
+<p align="center">
+  <img src="https://github.com/fiborges/42SchoolProjects/blob/main/NetPratice/net_overview-%201.png" height=600 width=500 alt="mask">
+</p>
+</br>
+
 ## IP Address Network Layer
 
 IPv4 vs. IPv6
