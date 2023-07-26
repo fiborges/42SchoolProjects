@@ -77,6 +77,12 @@ The subnet mask can also be represented using Classless Inter-Domain Routing (CI
 In the example above, the subnet mask 255.255.255.128 is equivalent to a mask of /25 using CIDR notation, as 25 bits out of the total 32 bits represent the network address.
 
 
+
+</br>
+<p align="center">
+  <img src="https://github.com/fiborges/42SchoolProjects/blob/main/NetPratice/net_models4-2.png" height=600 width=500 alt="mask">
+</p>
+</br>
 ## Switch: Data Link Layer
 A switch is a networking device that operates at the data link layer of the OSI model. It is used to connect multiple devices together within a single local area network (LAN). Unlike a router, a switch does not have any interfaces for connecting to different networks; instead, it focuses on distributing data packets only within its local network.
 
