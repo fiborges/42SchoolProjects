@@ -62,6 +62,14 @@ Projects developed or under development of the course. Each project has a brief 
 
    :white_check_mark: **Net_Practice (Practical exercise to let you discover networking)** - https://github.com/fiborges/42SchoolProjects/tree/main/NetPratice
 
+  **CPP (CPP00 | CPP01 | CPP02 | CPP03 | CPP04)** -
+  
+ ***CPP00 :white_check_mark:***
+ ***CPP01***
+ ***CPP02***
+ ***CPP03***
+ ***CPP04***
+
   
   
   
