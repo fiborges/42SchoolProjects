@@ -24,11 +24,11 @@ Projects developed or under development of the course. Each project has a brief 
  
 </div>
  
-## LEVEL  <img src="https://media.giphy.com/media/m8YFup5AVSW4/giphy.gif" width="30">
+## LEVEL 0
 
  :white_check_mark: **Libft (C)** - https://github.com/fiborges/42SchoolProjects/tree/main/Ft_libft
     
- ## LEVEL  <img src="https://media.giphy.com/media/Bdk2YzFKNYLwplLVNw/giphy.gif" width="30"> 
+ ## LEVEL 1
 
 :white_check_mark: **Born2BeRoot (Shell & Virtual Machine)** - https://github.com/fiborges/42SchoolProjects/tree/main/Born2beRoot
 
@@ -40,7 +40,7 @@ Projects developed or under development of the course. Each project has a brief 
 
  :white_check_mark: **Get_Next_Line (C)** - https://github.com/fiborges/42SchoolProjects/tree/main/GetNextLine
  
-  ## LEVEL  <img src="https://media.giphy.com/media/Iuee4dBGyRp9VatCZe/giphy.gif" width="30"> 
+  ## LEVEL 2
   
   :white_check_mark: **MiniTalk (C/Signals)** - https://github.com/fiborges/42SchoolProjects/tree/main/MiniTalk
   
@@ -50,7 +50,7 @@ Projects developed or under development of the course. Each project has a brief 
   
   :white_check_mark: **Exam_Rank2 (100/100)**
   
-  ## LEVEL  <img src="https://media.giphy.com/media/h5WehVcg3HN9U7yBSf/giphy.gif" width="30"> 
+  ## LEVEL 3
   
   :white_check_mark: **Philosophers (Basics of threading a process)** - https://github.com/fiborges/42SchoolProjects/tree/main/Philosophers
   
@@ -58,7 +58,7 @@ Projects developed or under development of the course. Each project has a brief 
 
   :white_check_mark: **Exam_Rank3 (100/100)**
 
-   ## LEVEL  <img src="https://media.giphy.com/media/U7oYLyQqXM9sA/giphy.gif" width="30"> 
+   ## LEVEL 4
 
    :white_check_mark: **Net_Practice (Practical exercise to let you discover networking)** - https://github.com/fiborges/42SchoolProjects/tree/main/NetPratice
 
