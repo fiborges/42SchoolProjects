@@ -65,8 +65,8 @@ Projects developed or under development of the course. Each project has a brief 
   :white_check_mark:**CPP (CPP00 | CPP01 | CPP02 | CPP03 | CPP04)** - https://github.com/fiborges/42SchoolProjects/tree/main/CPP
   
  ***CPP00 :white_check_mark:***
- ***CPP01***
- ***CPP02***
+ ***CPP01 :white_check_mark:***
+ ***CPP02 :white_check_mark:***
  ***CPP03***
  ***CPP04***
 
