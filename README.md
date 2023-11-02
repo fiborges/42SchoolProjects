@@ -61,8 +61,8 @@ Projects developed or under development of the course. Each project has a brief 
    ## LEVEL 4
 
    :white_check_mark: **Net_Practice (Practical exercise to let you discover networking)** - https://github.com/fiborges/42SchoolProjects/tree/main/NetPratice
-
-  :white_check_mark:**CPP (CPP00 | CPP01 | CPP02 | CPP03 | CPP04)** - https://github.com/fiborges/42SchoolProjects/tree/main/CPP
+   :white_check_mark: **Cub3D (Raycasting 3D Game)** - https://github.com/fiborges/42SchoolProjects/tree/main/Cub3D
+   :white_check_mark:**CPP (CPP00 | CPP01 | CPP02 | CPP03 | CPP04)** - https://github.com/fiborges/42SchoolProjects/tree/main/CPP
   
  ***CPP00 :white_check_mark:***
  ***CPP01 :white_check_mark:***
