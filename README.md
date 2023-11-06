@@ -69,8 +69,8 @@ Projects developed or under development of the course. Each project has a brief 
  ***CPP00 :white_check_mark:***
  ***CPP01 :white_check_mark:***
  ***CPP02 :white_check_mark:***
- ***CPP03***
- ***CPP04***
+ ***CPP03 :white_check_mark:***
+ ***CPP04 :white_check_mark:***
 
  
    :white_check_mark: **Exam_Rank4 (100/100)**
