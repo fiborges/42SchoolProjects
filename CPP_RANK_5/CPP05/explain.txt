@@ -1,0 +1,133 @@
+Herança:
+
+Herança é um conceito fundamental na programação orientada a objetos que permite criar novas classes (chamadas classes derivadas
+ou subclasses) com base em classes existentes (chamadas classes base ou superclasses). 
+A ideia é que uma classe derivada herda características, propriedades e comportamentos da classe base. 
+Isso significa que a classe derivada pode reutilizar o código da classe base e estender ou modificar esse código conforme 
+necessário.
+
+Imagine que criamos um programa para criar diferentes tipos de veículos. 
+podemos ter uma classe base chamada "Veículo" que contém propriedades e métodos comuns a todos os veículos, 
+como velocidade e cor. 
+A seguir criamos classes derivadas, como "Carro" e "Bicicleta", que herdam as propriedades e métodos da classe base, 
+mas também podem ter próprias propriedades e métodos específicos para carros e bicicletas.
+
+Polimorfismo:
+
+Polimorfismo é outro conceito importante na programação orientada a objetos que se relaciona com a capacidade de objetos 
+de diferentes classes responderem ao mesmo método de maneira única. 
+Por outras palavras, objetos de classes diferentes podem ser tratados de maneira uniforme, mesmo que tenham 
+comportamentos específicos diferentes.
+
+Imaginem que estamos a trabalhar com a classe "Animal" e com as suas classes derivadas, como "Cão" e "Gato". 
+Todas essas classes podem ter um método chamado "FazerSom", que é específico para cada tipo de animal. 
+O polimorfismo permite que se chame o método "FazerSom" num objeto "Animal" sem saber exatamente qual tipo de animal é. 
+O método "FazerSom" vai ser diferente, dependendo do tipo de animal, mesmo que seja chamado da mesma maneira.
+
+O polimorfismo é frequentemente alcançado através do uso de classes abstratas e interfaces, que definem assinaturas 
+de métodos que devem ser implementados pelas classes derivadas. Isso permite que objetos de classes diferentes se 
+comportem de maneira polimórfica, ou seja, respondam a chamadas de método de forma específica à sua própria classe, 
+tornando o código mais flexível e extensível.
+
+Em resumo, herança permite criar classes derivadas com base em classes existentes, enquanto o polimorfismo permite que 
+objetos de diferentes classes se comportem de maneira uniforme, chamando métodos comuns, mas com comportamentos específicos 
+para cada classe. 
+Esses conceitos são fundamentais na programação orientada a objetos para criar código reutilizável e flexível.
+
+
+Sobrecarga de operador
+
+std::ostream& operator<<(std::ostream& output, const Bureaucrat& fixedNumber);
+
+A sobrecarga é um conceito importante em programação que se refere à capacidade de definir várias versões de funções ou 
+operadores com o mesmo nome, mas com diferentes parâmetros. No contexto da linguagem de programação C++, a sobrecarga é comumente 
+usada para criar várias versões de funções ou operadores que se comportam de maneira diferente com base nos tipos ou número de argumentos 
+passados.
+
+Mesmo Nome, Diferentes Comportamentos: Quando sobrecarregamos uma função ou operador, estamos essencialmente a dizer ao compilador que deve 
+tratar várias versões daquela função com o mesmo nome. No entanto, cada versão pode ter um comportamento diferente, dependendo dos argumentos 
+que se dá.
+
+Exemplo de Sobrecarga: Imagina que temos uma função chamada "Soma".Podemos sobrecarregar essa função para lidar com diferentes tipos de dados. 
+Por exemplo, podemos ter uma versão da função "Soma" que recebe dois números inteiros e retorna a soma deles e outra versão que recebe dois números 
+de ponto flutuante e retorna a soma deles. Ambas as funções têm o mesmo nome, "Soma", mas comportam-se de maneira diferente com base nos tipos 
+de argumentos.
+
+Facilita o Uso e a Legibilidade: A sobrecarga torna o código mais fácil de usar e ler, porque podemos chamar a mesma função ou operador com diferentes 
+tipos de dados sem ter de preocupar com nomes diferentes para cada versão. Isso também torna o código mais genérico e flexível.
+
+Exemplo no C++: Neste caso, ao sobrecarregar o operador << para a classe Bureaucrat, estamos a dizer ao compilador como imprimir objetos dessa classe. 
+Isso é útil porque permite imprimir objetos da classe Bureaucrat de forma personalizada, tornando o código mais legível e útil para depuração.
+
+Em resumo, a sobrecarga é uma técnica que permite criar várias versões de funções ou operadores com o mesmo nome, mas com diferentes comportamentos 
+com base nos argumentos fornecidos. É uma parte importante da flexibilidade e da capacidade de personalização que a programação em C++ oferece.
+
+
+A classe std::exception é a classe base para todas as exceções padrão em C++. 
+Ela define a função what() como virtual pura, o que significa que todas as classes derivadas que representam 
+exceções devem fornecer uma implementação para a função what().
+
+Ao lançar uma exceção, a função what() é frequentemente usada para obter informações sobre o erro, 
+como uma mensagem de erro descritiva. Isso ajuda a depurar o código e entender a causa da exceção.
+
+Aqui está um exemplo de como podemos usar a função what() ao capturar e tratar uma exceção:
+
+```cpp
+
+try 
+{
+    // Código que pode lançar uma exceção
+} 
+catch (const std::exception& e) 
+{
+    // Captura a exceção e obtém a mensagem de erro usando e.what()
+    std::cerr << "Erro: " << e.what() << std::endl;
+}
+No código, você está fornecendo implementações personalizadas da função what() nas classes de exceção GradeTooHighException e GradeTooLowException 
+para fornecer mensagens específicas de erro quando essas exceções são lançadas. 
+Isso é uma prática comum ao criar suas próprias classes de exceção para tornar as mensagens de erro mais 
+descritivas e úteis.
+
+O encapsulamento é um dos quatro princípios fundamentais da programação orientada a objetos (POO), 
+juntamente com a herança, a abstração e o polimorfismo. Ele se refere à prática de ocultar detalhes internos da 
+implementação de uma classe e fornecer uma interface pública bem definida para interagir com a classe. 
+
+O encapsulamento tem várias finalidades:
+
+Proteção de Dados: O encapsulamento ajuda a proteger os dados internos de uma classe, tornando seus atributos 
+privados ou protegidos. Isso impede que dados sejam manipulados diretamente por outras partes do programa, evitando 
+inconsistências e erros.
+
+Modularidade e Manutenibilidade: Ao ocultar a implementação interna da classe, o encapsulamento permite que você 
+altere ou aprimore a implementação interna da classe sem afetar o restante do programa. Isso torna o código mais modular e 
+facilita a manutenção.
+
+Controle de Acesso: O encapsulamento permite que você controle como os dados e os comportamentos da classe são 
+acessados. Você pode definir métodos (métodos de acesso ou getters/setters) que fornecem um ponto de acesso controlado aos 
+atributos da classe. Isso permite a validação de dados e a execução de lógica personalizada antes de acessar ou modificar os atributos.
+
+Segurança: O encapsulamento ajuda a evitar que dados sensíveis sejam acessados e modificados indevidamente por partes externas do programa. 
+Isso é particularmente importante em sistemas que lidam com informações confidenciais.
+
+Abstração: O encapsulamento permite que os clientes da classe interajam com ela por meio de uma interface abstrata, sem precisar conhecer os 
+detalhes internos de sua implementação. Isso promove a abstração, um dos princípios-chave da POO.
+
+Reutilização de Código: Classes encapsuladas podem ser reutilizadas em diferentes partes do programa sem se preocupar com a complexidade de 
+sua implementação interna.
+
+Legibilidade e Manutenção do Código: O encapsulamento promove a criação de código mais legível, uma vez que os detalhes da implementação não 
+estão espalhados por todo o programa. Isso facilita a manutenção e o entendimento do código.
+
+Em resumo, o encapsulamento serve para proteger dados, fornecer uma interface controlada para interagir com uma classe, facilitar a manutenção, 
+promover a reutilização de código e melhorar a segurança do programa. É uma prática fundamental na programação orientada a objetos e ajuda a criar 
+código mais organizado e robusto.
+
+
+
+
+
+
+
+
+
+
