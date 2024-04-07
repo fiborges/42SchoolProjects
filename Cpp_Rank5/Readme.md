@@ -1,6 +1,7 @@
-This repository contains solutions for exercises from modules 5 to 9 of the C++ course.
-Module 5: Exceptions
-Concepts Covered:
+# This repository contains solutions for exercises from modules 5 to 9 of the C++ course.
+
+## Module 5: Exceptions
+### Concepts Covered:
 Exception Handling in C++:
 
 The use of exceptions as a mechanism for signaling and handling errors or unexpected conditions.
@@ -16,8 +17,9 @@ The resource implications of using exceptions versus other error-handling mechan
 Key Takeaways:
 
 Exceptions are used for error conditions not expected in the normal course of events. Quality error-handling code improves program robustness and user-friendliness. Choose error-handling mechanisms based on the nature and frequency of errors.
-Module 6: Intro to STL Containers
-Concepts Covered:
+
+## Module 6: Intro to STL Containers
+### Concepts Covered:
 STL Containers Overview:
 
 Introduction to STL (Standard Template Library) containers and their role in C++ programming.
@@ -36,8 +38,9 @@ Unordered sets, unordered maps, unordered multiset, and unordered multimap.
 Key Takeaways:
 
 STL containers provide efficient implementations of common data structures. Choose containers based on the trade-offs in complexity for different operations.
-Module 7: std::vector and std::list
-Concepts Covered:
+
+## Module 7: std::vector and std::list
+### Concepts Covered:
 std::vector:
 
 Dynamic arrays that can change in size efficiently.
@@ -56,8 +59,8 @@ Objects designed to traverse through a container.
 Key Takeaways:
 
 std::vector provides dynamic arrays with efficient element access and dynamic growth. std::list offers constant time insert and erase operations anywhere in the sequence. std::map is an associative container with key-value pairs sorted by keys.
-Module 8: STL Algorithms and Iterators
-Concepts Covered:
+## Module 8: STL Algorithms and Iterators
+### Concepts Covered:
 STL Algorithms:
 
 Pre-written algorithms operating on iterators.
@@ -73,8 +76,8 @@ Creation, advancement, and comparison of iterators.
 Key Takeaways:
 
 STL algorithms provide efficient operations on various containers. Iterator adapters and insert iterators enhance flexibility and functionality. Understanding and utilizing common traits among iterators.
-Module 9: More STL and Sorting Algorithms
-Concepts Covered:
+## Module 9: More STL and Sorting Algorithms
+### Concepts Covered:
 Handling Files in C++:
 
 File handling using ifstream and reading data from CSV files.
