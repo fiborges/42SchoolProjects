@@ -1,0 +1,216 @@
+Avaliar INCEPTION
+
+sudo nano /etc/hosts
+127.0.0.1       localhost
+127.0.1.1       Inception.myguest.virtualbox.org        Inception
+127.0.1.1       firibeir.42.fr
+
+
+sudo usermod -aG docker $USER
+newgrp docker
+
+APAGAR TUDO!
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -q -a)
+docker rmi -f $(docker images -q)
+docker network rm $(docker network ls -q)
+docker volume rm $(docker volume ls -q)
+docker system prune -f
+
+docker ps
+docker ps -a
+docker volume ls
+docker volume inspect src_mariadb e src_wordpress
+docker network ls
+docker network inspect incepction host bridge
+
+
+
+---------------------------------------------------------------------------
+
+ExaminAR o docker-compose.yml:
+Verifique se não há uso de network: host ou links:
+
+grep "network: host" ./srcs/docker-compose.yml
+grep "links" ./srcs/docker-compose.yml
+
+--------------------------------------------------------------------------------------------
+
+make
+---------------------------------------------------------------------------------------------
+
+NGINX:
+Certifique-se de que o NGINX só pode ser acessado pela porta 443 (HTTPS) e está configurado com SSL/TLS:
+
+curl -I http://localhost  # Deve falhar
+curl -kI https://localhost  # Deve funcionar
+
+-------------------------------------------------------------------------------------
+
+
+WordPress:
+Verifique se o WordPress está instalado e configurado corretamente:
+
+curl -kI https://localhost/wp-admin
+
+--------------------------------------------------------------------------------------------------
+
+
+MariaDB:
+Garanta que o MariaDB está operando e acessível apenas pelos contêineres necessários, sem acesso externo.
+
+exemplo:
+verificar a configuração de rede no arquivo docker-compose.yml para garantir que o MariaDB não está exposto a redes externas. MariaDB deve estar em uma rede interna com outros serviços que precisam acessá-lo, como o WordPress.
+
+services:
+  mariadb:
+    image: mariadb
+    networks:
+      - backend
+    # Outras configurações...
+
+make maria_shell
+mysql -h 127.0.0.1 -u root -p
+service mysql status
+pass:
+SHOW DATABASES;
+USE inception_db;
+SHOW TABLES;
+SELECT * FROM wp_comments;
+
+
+
+SHOW TABLES;
+CREATE DATABASE IF NOT EXISTS exemplo;
+USE exemplo;
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    idade INT
+);
+
+INSERT INTO clientes (nome, email, idade) VALUES ('João Silva', 'joao.silva@email.com', 30);
+INSERT INTO clientes (nome, email, idade) VALUES ('Maria Souza', 'maria.souza@email.com', 25);
+INSERT INTO clientes (nome, email, idade) VALUES ('Carlos Pereira', 'carlos.pereira@email.com', 28);
+
+SELECT * FROM clientes;
+
+
+UPDATE clientes SET idade = 31 WHERE nome = 'João Silva';
+
+DELETE FROM clientes WHERE nome = 'Carlos Pereira';
+
+exit;
+
+
+examine o Dockerfile de MariaDB para garantir que não há comandos que expõem o MariaDB ao mundo externo
+----------------------------------------------------------------------------------------------------
+Examine os logs do contêiner do MariaDB para identificar se há tentativas de conexão não autorizadas ou outros erros.
+
+
+docker logs mariadb
+
+------------------------------------------------------------------------------------------------
+
+Checar Volumes:
+Garanta que os volumes para MariaDB e WordPress existem e estão montados nos locais corretos:
+
+
+docker volume inspect mariadb_volume
+docker volume inspect wordpress_volume
+
+--------------------------------------------------------------
+Acessar o Site via HTTPS:
+
+Abra um navegador e acesse o site usando o endereço configurado, por exemplo, https://firibeir.42.fr.
+Verifique se o site carrega corretamente usando o protocolo HTTPS. Isto também testará se o SSL/TLS está configurado corretamente.
+
+Acesse https://firibeir.42.fr/wp-admin.
+Tente fazer login com as credenciais fornecidas ou configuradas pelo estudante.
+Verifique se o painel de administração é acessível e funcional.
+
+Crie uma postagem ou página para ver se o WordPress está operando normalmente.
+Faça upload de um arquivo de mídia para testar se os diretórios de dados estão configurados corretamente e se têm as permissões necessárias.
+Verifique links internos e funcionalidades de navegação para assegurar que tudo está integrado corretamente.
+
+-----------------------------------------------------------------------------------------------
+Acesso ao Contêiner do WordPress:
+Primeiramente, você precisa acessar o shell dentro do contêiner do WordPress. Você pode fazer isso usando o comando docker exec.
+
+
+docker exec -it wordpress bash
+
+----------------------------------------------------------------------------------------------
+Testar Persistência:
+
+Faça alterações no WordPress.
+Reinicie os contêineres e verifique se as alterações persistem:
+
+docker-compose down
+docker-compose up --detach
+
+--------------------------------------------------------------------------------------------
+Logs e Limpeza:
+
+Verifique os logs para erros:
+docker logs [nome_do_contêiner]
+
+Limpeza final após a avaliação:
+
+LIMPAR TUDO!
+
+docker-compose down
+docker volume rm $(docker volume ls -q)
+docker network rm $(docker network ls -q)
+
+
+perguntas:
+Como funciona o Docker e o Docker Compose?
+Qual é a diferença entre uma imagem Docker criada com Docker compose e sem Docker Compose?
+Quais são as vantagens do Docker em comparação com máquinas virtuais tradicionais?
+Por que você escolheu essa estrutura de diretórios específica para o projeto?
+
+firibeir@c1r2s2 ~/Desktop/f % ls */*
+srcs/docker-compose.yml
+
+srcs/requirements:
+mariadb  nginx	wordpress
+
+
+Explique como você configurou o NGINX e o SSL/TLS.
+
+Baseei a imagem no Debian 11 e instalei o NGINX e o OpenSSL.Utilizei o OpenSSL para gerar um certificado SSL autoassinado, garantindo que o tráfego HTTPS possa ser criptografado.
+
+Preparei um arquivo de configuração para o NGINX (nginx_config.conf) que define o servidor para escutar na porta 443 com SSL habilitado.
+Especifiquei os caminhos para o certificado SSL e a chave privada no arquivo de configuração, além de configurar o NGINX para usar os protocolos TLSv1.2 e TLSv1.3.
+Configurei o NGINX para servir os arquivos do WordPress, localizados em /var/www/html/, e processar arquivos PHP através de conexões FastCGI para o serviço WordPress.
+
+Defini o serviço NGINX no Docker Compose com mapeamento da porta 443, uso de volumes para persistência de dados e configurações, e especificação de dependências de rede para integrar com outros serviços como o WordPress e MariaDB.
+
+Como o WordPress é instalado e configurado no seu projeto?
+A imagem é baseada no Debian 11, garantindo um ambiente de sistema operacional estável e seguro.
+O script instala PHP 7.4 e suas extensões necessárias para o WordPress funcionar corretamente, incluindo suporte para MySQL, manipulação de imagens, e mais.
+WP-CLI, uma ferramenta de linha de comando para gerenciar instalações do WordPress, é baixada e configurada. Isso permite automatizar tarefas como a instalação do WordPress, criação de usuários, e configuração do site.
+
+(wp_install_config.sh):
+O arquivo de configuração do PHP-FPM é alterado para escutar na porta 9000, permitindo a comunicação com o NGINX.
+Utiliza o WP-CLI para instalar o WordPress se ele ainda não estiver instalado. Configura o site com os detalhes fornecidos, como URL, título do site, usuário admin, senha e email.
+Após a instalação bem-sucedida, um segundo usuário é criado com o papel de autor, aumentando a segurança e separação de responsabilidades dentro do site.
+Se o WordPress não estiver presente, ele tenta baixar e configurar o WordPress até um número máximo de tentativas. Isso garante robustez no processo de instalação, lidando com possíveis falhas temporárias de rede ou outras interrupções.
+
+Exposição da Porta 9000: A porta 9000 é exposta, permitindo que o NGINX encaminhe as requisições PHP para o PHP-FPM rodando nesta porta.
+O script de instalação é configurado como ponto de entrada, e o php-fpm7.4 é executado como comando final, mantendo o processo do PHP-FPM em execução em primeiro plano.
+
+
+Como você garante a segurança e o isolamento do banco de dados MariaDB?
+A segurança e o isolamento do MariaDB são assegurados através de uma combinação de configurações automáticas de segurança durante a inicialização, criação de usuários com privilégios limitados, uso de redes isoladas no Docker, e práticas robustas de gestão de senhas e configurações. Isso garante que o banco de dados não só esteja protegido contra acessos não autorizados, mas também que seu funcionamento seja isolado e seguro dentro do ambiente Dockerizado.
+
+Quais medidas você tomou para garantir a persistência de dados?
+    MariaDB: Utiliza-se um volume chamado mariadb_data para armazenar os dados do banco de dados MariaDB. Isso garante que os dados não sejam perdidos quando o contêiner é reiniciado ou reconstruído. Este volume é configurado para montar um diretório específico no host (${VOLUMES_PATH}/data/mysql) para o diretório de dados do MariaDB (/var/lib/mysql).
+    WordPress: Similarmente, wordpress_data é utilizado para armazenar os arquivos estáticos e uploads do WordPress. Ele mapeia um diretório específico no host (${VOLUMES_PATH}/data/wordpress) para o diretório raiz do WordPress (/var/www/html), mantendo seguros os arquivos e mídias adicionados ao site.
+
+
+
+
